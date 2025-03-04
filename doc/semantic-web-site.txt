@@ -1,0 +1,82 @@
+Summary of Key Practices:
+
+Semantic HTML: Use appropriate HTML tags and ARIA roles.
+npm install semantic-ui-react
+https://medium.com/@lundjaden/beginning-the-use-of-semantic-ui-for-react-1ad23e2ea8ff
+https://react.semantic-ui.com/layouts/
+
+Semantic:
+https://medium.com/@amitonline/semantic-html-and-react-building-accessible-and-meaningful-interfaces-ab8124d198da
+about aria tags:
+https://www.w3schools.com/accessibility/
+
+Use proper HTML tags for different elements:
+<header>, <footer>, <nav>, <main>, <article>, <section>, and others help with content organization.
+Headings should be used in a hierarchical order, like <h1> for the main heading, <h2> for subheadings, and so on.
+ARIA attributes provide additional accessibility information to screen readers.
+ARIA roles: These define the role of an element (e.g., button, navigation).
+ARIA landmarks: You can use roles like navigation, main, header, and footer to define sections of the page.
+Example of aria-live to announce changes dynamically:
+html
+Копировать
+<div aria-live="polite">
+  <p>New message received!</p>
+</div>
+aria-live="polite" will announce this update to the user when it is less intrusive.
+
+Keyboard navigation: Ensure your site is fully navigable with the keyboard.
+<button tabindex="0">Submit</button>
+
+Alt text: Provide alternative descriptions for images.
+<img src="logo.png" alt="Company Logo" />
+<img src="decorative-image.png" alt="" />
+
+Color contrast: Make sure text is legible against backgrounds.
+Contrast Checker: https://webaim.org/resources/contrastchecker/
+Give ability change colors and size of fonts 
+You can also set your font size in relative units like em or rem instead of pixels to make resizing easier.
+
+Responsive voice commands: Integrate voice control for users who can't use traditional input methods.
+react-speech-recognition: React bindings for the Web Speech API for adding voice commands.
+
+Screen reader support: Ensure dynamic content updates are announced.
+react-aria-live: A React library for managing live regions for screen readers.
+
+Form accessibility: Provide proper form labels, validation, and error handling.
+Every form field has a properly associated <label>.
+Use aria-describedby to provide additional hints or descriptions for form fields.
+Forms need to be accessible for users with disabilities. Make sure that:
+<form>
+  <label for="email">Email:</label>
+  <input type="email" id="email" aria-describedby="email-help" />
+  <small id="email-help">We will never share your email.</small>
+</form>
+
+
+Testing: Use accessibility testing tools to check for issues.
+Testing your site for accessibility is critical. You can use tools like:
+Lighthouse (built into Chrome DevTools)
+axe-core (a browser extension)
+WAVE (Web Accessibility Evaluation Tool)
+React-axe (for React apps)
+
+Tools and Libraries to Help You:
+React A11y: A set of React components for building accessible UIs.
+provides tools to manage focus, keyboard navigation, ARIA attributes, and dynamic content updates, 
+making it easier to build apps that are usable by people with disabilities.
+
+!!!use React A11y react-aria-live: A React library for managing live regions for screen readers.
+react-speech-recognition: React bindings for the Web Speech API for adding voice commands.
+
+Contrast Checker: https://webaim.org/resources/contrastchecker/
+
+Building a site that is adaptable for people with disabilities requires a combination of:
+
+Semantic HTML
+ARIA attributes
+Keyboard navigation
+Color contrast
+Text resizing options
+Captions and transcripts for media
+Focus management
+Voice controls

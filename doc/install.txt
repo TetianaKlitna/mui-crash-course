@@ -1,0 +1,68 @@
+
+npm create vite@latest my-react-app --template react
+
+choose typescript
+
+cd my-pet-app
+npm install
+npm run dev
+
+Install tailwind:
+npm install tailwindcss @tailwindcss/vite
+
+vite.config.ts:
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+index.css:
+@import "tailwindcss";
+
+npm run dev
+
+install react-icons:
+npm install react-icons
+https://react-icons.github.io/react-icons/
+
+npm install react-a11y-utils
+
+mui install 
+https://mui.com/material-ui/getting-started/installation/
+npm install @mui/material @emotion/react @emotion/styled
+install roboto font that default for mui:
+install npm install @fontsource/roboto
+npm install @mui/icons-material
+
+https://mui.com/material-ui/getting-started/installation/
+
+npm install query-string
+https://www.npmjs.com/package/query-string
+
+
+for insparation: 
+https://www.uidesigndaily.com/sketch
+https://calltoinspiration.com/
+
+generator colors palette:
+https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff
+
+https://getbootstrap.com/docs/5.3 - бесплатная библиотека стилей с полными пояснениям
+https://maketext.io/ - бесплатное создание лого
+https://www.youtube.com/watch?v=lTeza7Vxo8c - youtoob канал с Pretier настройкой
+https://www.youtube.com/watch?v=2tAPxjcGLms&list=LL&index=1&t=39s - создание 3д сайта
+https://webaim.org/resources/contrastchecker/ - сайт-программа, который проверяет правильную контрастность цветов
+https://unsplash.com/s/photos/forest-background - сайт с бесплатными качественными фотографиями
+maketext.iomaketext.io
+Cool Texts Generator in SVG / PNG with 30+ Effects x 800+ Fonts · maketext.io
+style your words and logos with tons of fonts and customizable effects within seconds.
+
+AirBnB doesnt offer a public API but expedia Travel Group does :
+https://developers.expediagroup.com/docs/
+
+Hotel list
+https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-list
+https://developers.amadeus.com/self-service/category/hotels/api-doc/hotel-booking
