@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import AccessTime from "@mui/icons-material/AccessTime";
 import Rating from "@mui/material/Rating";
+import Grid from "@mui/material/Grid2";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
@@ -33,6 +34,7 @@ const theme = createTheme({
 const TourCard = ({tour}) => {
   return (
     <ThemeProvider theme={theme}>
+     <Grid size={3} spacing={5}>
       <Paper elevation={3}>
         <img
           className="img"
@@ -82,6 +84,7 @@ const TourCard = ({tour}) => {
           </Box>
         </Box>
       </Paper>
+      </Grid>
     </ThemeProvider>
   );
 };
